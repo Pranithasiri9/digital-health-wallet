@@ -109,10 +109,13 @@ Design a Health Wallet that is accessible to a person anywhere, anytime, with th
 cd backend
 npm install
 node server.js
+```
 ### Frontend Setup
+``` bash
 cd frontend
 npm install
 npm start
+```
 
 -------
 📎 **Recording Link:**  
