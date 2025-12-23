@@ -1,143 +1,129 @@
-🏥 Digital Health Wallet
+# 🏥 Digital Health Wallet
 
-A full-stack Digital Health Wallet that allows users to securely store, view, track, and share medical reports and vitals anytime, anywhere.
-This project is built as part of the 2care.ai Assignment using ReactJS, Node.js, and SQLite.
+A full-stack **Digital Health Wallet** application that enables users to securely store, view, track, and share medical reports and vitals anytime, anywhere.
 
-🚀 Features
-👤 User Management
+This project is developed as part of the **2care.ai Technical Assignment** using **ReactJS**, **Node.js (Express)**, and **SQLite**.
 
-User registration and login
+---
 
-JWT-based authentication
+## 📌 Problem Statement
 
-Role-based access (Owner, Viewer)
+Design a Health Wallet that is accessible to a person anywhere, anytime, with the ability to:
+- Upload medical reports
+- Track vitals over time
+- Retrieve reports by date or category
+- Share selected reports with others using access control
 
-📄 Medical Reports
+---
 
-Upload medical reports (PDF/Image)
+## 🚀 Features
 
-Store metadata (report type, date)
+### 👤 User Management
+- User registration and login
+- JWT-based authentication
+- Role-based access (Owner / Viewer)
 
-View and download uploaded reports
+### 📄 Medical Reports
+- Upload medical reports (PDF/Image)
+- Store report metadata (type, date)
+- View and download uploaded reports
+- Secure server-side file storage
 
-Reports stored securely on the backend
+### 📊 Vitals Tracking
+- Store vitals linked to medical reports
+- Display vitals summary:
+  - Blood Pressure
+  - Blood Sugar
+  - Heart Rate
+- Visualize vitals trends using charts
+- Logical extraction of vitals from uploaded reports
 
-📊 Vitals Tracking
+### 🔐 Report Sharing
+- Grant access to selected reports
+- Shared users receive **read-only access**
+- Shared reports are displayed in a dedicated section
 
-Store vitals linked to medical reports
+---
 
-Display vitals summary (BP, Sugar, Heart Rate)
+## 🧱 System Architecture
 
-Visualize vitals trends using charts
+### Frontend (ReactJS)
+- Component-based UI architecture
+- Material UI for responsive and clean design
+- Pages:
+  - Login
+  - Register
+  - Dashboard
+  - Upload Report
+  - Vitals
+  - Shared Reports
+- Axios for API communication
+- Recharts for vitals visualization
 
-Vitals are logically extracted from uploaded reports
+### Backend (Node.js + Express)
+- RESTful API design
+- JWT authentication middleware
+- Secure file upload handling
+- Authorization logic for shared access
 
-🔐 Report Sharing
+### Database (SQLite)
+- Lightweight relational database
+- Suitable for local development and prototyping
 
-Share selected reports with other users
+---
 
-Shared users get read-only access
+## 🗄️ Database Schema
 
-Shared reports visible in a separate section
+### Tables
+- **users** – stores user credentials and roles
+- **reports** – stores uploaded report metadata
+- **vitals** – stores extracted vitals over time
+- **shared_access** – manages report sharing permissions
 
-🧱 System Architecture
-Frontend (ReactJS)
+---
 
-Component-based UI using Material UI
+## 🔐 Security Considerations
+- Passwords hashed using **bcrypt**
+- JWT used for authentication and authorization
+- Protected API routes using middleware
+- Shared reports restricted to **read-only access**
 
-Pages: Login, Register, Dashboard, Upload Report, Vitals, Shared Reports
+---
 
-Axios used for API communication
+## 🛠️ Technology Stack
 
-Charts rendered using Recharts
+| Layer | Technology |
+|-----|-----------|
+| Frontend | ReactJS, Material UI, Recharts |
+| Backend | Node.js, Express.js |
+| Database | SQLite |
+| Authentication | JWT |
+| File Storage | Local Server Storage (`/uploads`) |
 
-Backend (Node.js + Express)
+---
 
-RESTful APIs
+## ⚙️ Setup Instructions
 
-JWT authentication middleware
-
-Secure file uploads
-
-Access control for shared reports
-
-Database (SQLite)
-
-Lightweight relational database
-
-Tables:
-
-users
-
-reports
-
-vitals
-
-shared_access
-
-🗄️ Database Schema (Summary)
-
-users: stores user credentials
-
-reports: stores uploaded report metadata
-
-vitals: stores extracted vitals over time
-
-shared_access: controls report sharing permissions
-
-🔐 Security Considerations
-
-Passwords hashed using bcrypt
-
-JWT used for authentication
-
-Protected routes using middleware
-
-Shared reports are strictly read-only
-
-🛠️ Tech Stack
-
-Frontend: ReactJS, Material UI, Recharts
-
-Backend: Node.js, Express.js
-
-Database: SQLite
-
-Auth: JWT
-
-File Storage: Local server storage (/uploads)
-
-⚙️ Setup Instructions
-Backend
+### Backend Setup
+```bash
 cd backend
 npm install
 node server.js
-
-
-Backend runs on: http://localhost:4000
-
-Frontend
+### Frontend Setup
 cd frontend
 npm install
 npm start
 
+-------
+📎 **Recording Link:**  
+https://drive.google.com/file/d/1-C_L4VpB61H0E3210sCEP0HWuxFkjTUI/view?usp=sharing
+---
+## 📌 Conclusion
 
-Frontend runs on: http://localhost:3000
+This **Digital Health Wallet** showcases a secure, scalable, and user-friendly approach to managing personal health data.  
+It effectively demonstrates full-stack development, system design, access control mechanisms, and data visualization aligned with real-world healthcare requirements.
 
-🎥 Demo & Recording
 
-A screen recording demonstrating:
 
-Application walkthrough
 
-Key features
 
-Code structure
-
-Local setup and execution
-
-📎 Recording Link: https://drive.google.com/file/d/1-C_L4VpB61H0E3210sCEP0HWuxFkjTUI/view?usp=sharing
-
-📌 Conclusion
-
-This Digital Health Wallet demonstrates a scalable, secure, and user-friendly approach to managing personal health data, aligned with real-world healthcare needs
